@@ -4,7 +4,7 @@ import classNames from 'classnames';
 import { useForm } from 'react-hook-form';
 import { Button } from '../components/Button';
 
-export const SignUp = () => {
+export const SignIn = () => {
   const {
     register,
     handleSubmit,
@@ -79,10 +79,10 @@ export const SignUp = () => {
               </span>
             ) : null}
           </div>
-          <Button>Criar uma nova conta</Button>
+          <Button>Acessar plataforma</Button>
           <span className='text-sm mt-2 text-gray-500'>
             Já possui uma conta?{" "}
-            <Link className='text-sky-500 hover:underline' to="/sing-in">
+            <Link className='text-sky-500 hover:underline' to="/sing-up">
               Acesse agora!
             </Link>
           </span>
