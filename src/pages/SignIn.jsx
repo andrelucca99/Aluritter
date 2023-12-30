@@ -3,6 +3,7 @@ import { App } from '../layouts/App';
 import classNames from 'classnames';
 import { useForm } from 'react-hook-form';
 import { Button } from '../components/Button';
+import { Input } from '../components/Input';
 
 export const SignIn = () => {
   const {
@@ -24,7 +25,7 @@ export const SignIn = () => {
           onSubmit={handleSubmit(handleFormSubmit)}
         >
           <div>
-            <input
+            <Input
               type="email"
               placeholder='email@exemplo.com'
               { ...register('email', {
@@ -52,7 +53,7 @@ export const SignIn = () => {
             ) : null}
           </div>
           <div className='mt-2.5'>
-            <input
+            <Input
               type="password"
               placeholder='Senha'
               { ...register("password", {
@@ -67,6 +68,7 @@ export const SignIn = () => {
                 }
               )}
             />
+
             {errors.password?.type === 'required' ? (
               <span className="text-sm text-red-500 pl-1">
                 Senha é obrigatória
@@ -79,6 +81,7 @@ export const SignIn = () => {
               </span>
             ) : null}
           </div>
+          
           <Button>Acessar plataforma</Button>
           <span className='text-sm mt-2 text-gray-500'>
             Já possui uma conta?{" "}

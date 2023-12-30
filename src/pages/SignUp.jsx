@@ -3,6 +3,7 @@ import { App } from '../layouts/App';
 import classNames from 'classnames';
 import { useForm } from 'react-hook-form';
 import { Button } from '../components/Button';
+import { Input } from '../components/Input';
 
 export const SignUp = () => {
   const {
@@ -24,7 +25,7 @@ export const SignUp = () => {
           onSubmit={handleSubmit(handleFormSubmit)}
         >
           <div>
-            <input
+            <Input
               type="email"
               placeholder='email@exemplo.com'
               { ...register('email', {
@@ -52,7 +53,7 @@ export const SignUp = () => {
             ) : null}
           </div>
           <div className='mt-2.5'>
-            <input
+            <Input
               type="password"
               placeholder='Senha'
               { ...register("password", {
